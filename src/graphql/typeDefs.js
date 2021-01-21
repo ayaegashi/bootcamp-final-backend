@@ -60,6 +60,8 @@ module.exports = gql`
     id: ID!
     apiID: String!
     link: String!
+    createdAt: String!
+    updatedAt: String!
   }
 
   input TriedRecipeInput {
@@ -71,6 +73,8 @@ module.exports = gql`
     id: ID!
     apiID: String!
     link: String!
+    createdAt: String!
+    updatedAt: String!
   }
 
   input BookmarkInput {
