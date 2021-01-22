@@ -4,7 +4,7 @@ const userData = require('./users')
 casual.define('diet', ({ userID }) => ({
   id: casual.uuid,
   userID,
-  restriction: casual.random_element(['balanced', 'high-fiber', 'high-protein', 'low-carb', 'low-fat', 'low-sodium']),
+  restriction: casual.random_element(['balanced', 'high-protein', 'low-carb', 'low-fat']),
   createdAt: casual.moment,
   updatedAt: casual.moment,
 }))
