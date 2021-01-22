@@ -13,7 +13,7 @@ exports.up = async knex => createTableIfNotExists(knex, 'healths', table => {
     .notNullable()
 
   table
-    .enum('restriction', ['dairy-free', 'egg-free', 'gluten-free', 'kosher', 'peanut-free', 'pescatarian', 'shellfish-free', 'soy-free', 'tree-nut-free', 'vegan', 'vegetarian'])
+    .enum('restriction', ['peanut-free', 'tree-nut-free', 'vegan', 'vegetarian'])
     .notNullable()
 
   table.timestamp('createdAt').defaultTo(knex.fn.now())
