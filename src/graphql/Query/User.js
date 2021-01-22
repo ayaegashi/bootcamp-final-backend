@@ -32,7 +32,7 @@ const userViewer = async(obj, params, {user: {id}}) => {
 const triedRecipes = async({id}, params, context) => {
     console.log(id)
     try {
-        const tried = await TriedRecipe.query().where({userID: id})
+        const tried = await TriedRecipe.query().where({userID: id}).orderBy('createdAt', 'DESC')
         return tried
     } catch (err) {
         console.log(err)
@@ -41,7 +41,7 @@ const triedRecipes = async({id}, params, context) => {
 
 const bookmarks = async({id}, params, context) => {
     try {
-        const b = Bookmark.query().where({userID: id})
+        const b = Bookmark.query().where({userID: id}).orderBy('createdAt', 'DESC')
         return b
     } catch (err) {
         console.log(err)
