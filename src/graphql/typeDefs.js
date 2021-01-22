@@ -20,6 +20,8 @@ module.exports = gql`
   type Query {
     allUsers: [User!]!
     userViewer: User!
+    existsBookmark(input: BookmarkInput!):[Bookmark!]
+    existsTriedRecipe(input: TriedRecipeInput!):[TriedRecipe!]
   }
 
   type User {
